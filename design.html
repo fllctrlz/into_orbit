@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ctrl-Z</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+<div class="container">
+	<img src = "images/combined_logo2.png"></img>
+</div>
+	
+	
+	<!-- menu -->
+    <div class="container">
+      <ul class="nav nav-tabs">
+	  
+        <li class="active">
+			<a href="index.html">Home</a>
+		</li>
+		 
+		 <li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Team Profile<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="members.html">Members</a></li>
+				<li><a href="mentors.html">Coaches and Mentors</a></li>
+			</ul>
+        </li>
+		
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Robot<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="design.html">Design</a></li>
+				<li><a href="strategy.html">Strategy</a></li>
+				<li><a href="programming.html">Programming</a></li>
+				<!--<li><a href="build.html">Building Instructions</a></li> -->
+			</ul>
+        </li>
+       
+	   <li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Research<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="solution.html">Solution</a></li>
+				<li><a href="experts.html">Experts</a></li>    
+				<li><a href="expertnotes.html">Expert Notes</a></li>
+				<li><a href="articles.html">Selected Academic Research</a></li>
+				<li><a href="references.html">References</a></li>
+				<li><a href="project_brochure.pdf" target="_blank">Project Brochure</a></li>
+			</ul>
+		</li>
+		
+		<li>
+			<a href="events.html">Sharing</a>
+        </li>
+
+       <li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href = "http://www.firstlegoleague.org/challenge" target="_blank">HydroDynamics Challenge</a></li>
+				<li><a href = "fll/TheRobotGameRules.pdf" target="_blank">Latest rule updates - merged</a></li>   
+ 				<li><a href = "http://flltournament.com/Scoresheet.aspx?CID=34" target="_blank">Score Calculator</a></li>
+				<li><a href = "http://home.ican.net/~686280/index.html" target="_blank">Natures Fury website</a></li>
+				<li><a href = "http://fllctrlz.github.io/world_class/index.html" target="_blank">World Class website</a></li>
+				<li><a href = "http://fllctrlz.github.io/trash_trek/index.html" target="_blank">Trash Trek website</a></li>
+				<li><a href = "http://fllctrlz.github.io/animal_allies/index.html" target="_blank">Animal Allies website</a></li>
+			</ul>
+        </li>
+
+		<li>
+			<a href="contact.html">Contact Us</a>
+        </li>			
+	
+	</ul>
+	
+	</div>
+    <!-- end of menu -->
+
+
+   <div class="container">
+	<h2>Design Process</h2>
+	<br>
+	<p>When designing our base robot, we establish criteria at the outset, such as desired footprint, height, balance, drive train,
+	sensors to be used, user interface, etc. to arrive at a working prototype. We also strive to design and build a base robot which
+	is robust and which features a frame around the chassis to provide structural rigidity as well as means to square up against walls
+	and mission models. <!--Before creating a prototype base robot, we prepare some high level rudimentary drawings on a flip chart
+	which we use to stimulate discussion amongst team members. Once the team settles on a high-level base robot design, we use LDD
+	or ML CAD to create a 3D-drawing of the prototype. Doing so allows us to be as efficient as possible with regard to type and quantity
+	of pieces used. Based on the final drawing, we construct our prototype base robot using LEGO pieces/elements. After creating a working
+	prototype,--> We design attachments keeping in mind that these attachments need to be
+	easy to install and remove, robust, and both passive and multi-purpose whenever possible. From testing the prototype base robot and
+	the attachments, we make revisions to our work in order to combine and speed up missions and increase repeatability to achieve
+	maximum efficiency. By the end of the season, our attachments will often be in their fifth or sixth iteration.</p>
+<br>
+
+<!--		<img src="images/robot/skittlesrobot.jpg"></img> -->
+		<h2>Examples of Robotic Testing Conducted by Ctrl-Z </h2>
+	<br>
+	<h4>Finding the Optimal Set of Color Sensors for our Robot</h4>
+	<p>When first designing our robot we wanted to make sure that all the light/color sensors behaved similarly.
+	Color sensors each return small differences in readings because of variations in manufacturing.
+	For example, if you were to place two different color sensors on the same black line,
+	each would return different values for light intensity.
+	Sometimes the difference may be significant. To make sure that
+	all our light sensors had about the same reading we completely shielded ten color sensors to eliminate the
+	variable of ambient light and recorded the reading
+	for each of the color sensors on black, white, and green. We then found the three color sensors which have the
+	closest reading to each other and used those three color sensors on the robot.
+	</p>
+	<br>
+	<h4>Making the Robot Drive Straight</h4>
+	<p>We have found the the green EV3 move blocks (Move Tank and Move Steering) are unreliable.
+	Although they have a built in PID feature, they still do not move the robot in a straight line. To test this,
+	we set a designated starting spot for the robot and then we ran it until it hit the wall on
+	the other side of the table. We repeated this dozens of times and found that each time it 
+	would end up in a different spot on the other side of the table. Each time it would be up to one 
+	inch away from the previous run. Then, we made our own error-corrected
+	move block (which you can read about in the programming section of this website). We conducted the same experiment
+	using our block and found that there was much less error and the robot would consistently
+	end up in the same position on the table.
+	</p>
+	<br>
+	<h4>Light Sensor Distance Experiment</h4>
+	<p>Our light sensors were dependent on the distance they were away from the mat. 
+	We found out that our light sensors were too low to the mat and were not picking up proper light readings.
+	We used the EV3 experiment which can track the different movements on the motors and sensors. We tracked the readings to see if they would change properly
+	from white to black; 100 to 0. They did not reach those values so we realized it was too far from the mat.
+	</p>
+<br>
+<br>
+<h2>Our Base Robot</h2>
+<br>
+		
+		<img class="img_robot" src="images/robot/robot1.jpg"></img>
+		<img class="img_robot" src="images/robot/robot2.jpg"></img>
+		<img class="img_robot" src="images/robot/robot3.jpg"></img>
+		<img class="img_robot" src="images/robot/robot4.jpg"></img>
+	<br>
+	<br>
+
+	<p>
+Our base robot is very robust and compact with a frame for strength. We also use four light sensors and for maximum flexibility, with shielding from ambient light. 
+The robot’s main drive wheels are medium in diameter and small in thickness to allow us to balance accuracy and speed together.  
+The robot uses small wheels without rubber on them as sliders, to be steering
+neutral. Our modular design and attachment bay allows the robot driver to install and remove attachments
+quickly and accurately, while our brain’s positioning allows for easy swapping of batteries.
+	</p>
+		<br>
+		<br>
+		
+<h2>Building Our Robot And Attachments</h2>
+<br>
+
+<!--
+<img class="small_img" src="images/robot/onrobot/1.jpg"></img>
+<img class="small_img" src="images/robot/onrobot/2.jpg"></img>
+<img class="small_img" src="images/robot/onrobot/3.jpg"></img>
+<img class="small_img" src="images/robot/onrobot/4.jpg"></img>
+<img class="small_img" src="images/robot/onrobot/5.jpg"></img>
+<img class="small_img" src="images/robot/onrobot/6.jpg"></img>	
+
+		<br>
+		
+		<br>
+		<h3>420 Points In 2.5 Minutes In Preparation for Provincials</h3>
+		<br>
+		<center>
+			<iframe width="680" height="480" src="https://www.youtube.com/embed/VBwrlkUYw70">
+			</iframe>
+		</center>
+		<br>
+
+		<h3>330 Points In 2.5 Minutes In Preparation for Regionals</h3>
+		<br>
+		<center>
+			<iframe width="680" height="480" src="https://www.youtube.com/embed/9O7XJiSlBFk">
+			</iframe>
+		</center>
+		<br>
+
+<h2>Attachment Details</h2>
+<table class="table table-striped table-bordered">
+	<thead>
+		<tr>
+			<th class="tick-border">Name of Attachment</th>
+			<th class="tick-border">Description</th>
+			<th class="tick-border">Picture</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+             <td class="tick-border">Rain Pipe</td>
+             <td class="tick-border">
+				This attachment is a large frame with wheels.  It has a long horizontally-moving forklift 
+				arm that connects to the gears on the robot when the frame is placed over the robot.  
+				As the robot moves along the east wall towards the Flow mission using guide wheels, 
+				the arm extends to push the Filter in, then lifts to move over it.  When the robot 
+				reaches the Flow mission, it pushes the Pump Addition into the wall and triggers the 
+				Flow mission using angled beams.  The arm extends to the Rain mission model.  
+				The robot then moves backwards along with the arm, triggering the Rain.  The attachment has a small basket to take rain back to base.
+				The robot moves towards the wall again and moves the arm again to push the Pump Addition into its target.			 
+			</td>
+            <td width="44%" class="tick-border"><img class="attachemnt_img" src="images/robot/attach4.jpg"></img></td>
+		</tr>
+		
+		<tr>
+             <td class="tick-border">Sludge Truck</td>
+             <td class="tick-border">
+				This attachment removes the Sludge from the Water Treatment Model and brings it back to base for the final mission.			 
+			</td>
+            <td width="44%" class="tick-border"><img class="attachemnt_img" src="images/robot/attach3.jpg"></img></td>
+		</tr>
+		<tr>
+            <td class="tick-border">Double Pipe</td>
+            <td class="tick-border">
+				An arm falls onto the flower’s base, pressing against the ground while also pushing the water into 
+				the basin to raise the flower. When the Flower raises, it releases Rain into itself.  
+				A one-way latch on the same arm lowers and picks up the broken pipe. The robot drives to the 
+				Pipe Construction zone and lifts the main arm along with a gate, allowing the robot to simply 
+				drive away and deposit the new pipe without an optional loop.  Two axles on the other side of 
+				the robot lower and drop a new pipe with an optional loop into the Pipe Replacement target.  
+				The robot drives towards the nearest Manhole Cover and flips it by pushing it into the barrier
+				behind it with an axle.  On the way back to base, the robot flips the second Manhole Cover 
+				using the same method.
+			</td>
+            <td width="44%" class="tick-border"><img class="attachemnt_img" src="images/robot/attach1.jpg"></img></td>
+        </tr>
+		<tr>
+			<td class="tick-border">Pushstrosity</td>
+			<td class="tick-border">This is our largest attachment, employing a number of arms. 
+				It uses the same mechanism as the rest of the attachments to lock the gears into place. 
+				The robot pushes the attachment along the south wall using guide wheels. The first mission
+				that it will complete is the fountain mission, using a passive device activated by an arm 
+				hitting the fountain to drop a big water into the basin with enough force to raise the fountain.
+				As it progresses, it will use one arm to simultaneously drop the tripod into its target, flush
+				the toilet and extend the arm carrying the Slingshot, while slowly lowering another arm which 
+				will later drop off the well. When it hits the east wall, it will complete the sink mission, suspend the Slingshot,
+				and fling 2 Big Waters and 3 Rain into its target.
+			</td>
+            <td width="44%" class="tick-border"><img class="attachemnt_img" src="images/robot/attach2.jpg"></img></td>
+		</tr>
+	</tbody>
+</table>
+-->
+		<br>
+		<br>
+<!--
+		<h2>Photos of Robot Building</h2>
+		<br>
+		<img class="small_img" src="images/robot/1.jpg"></img>
+		<br>
+-->
+
+    </div>
+	<script src="jquery/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
