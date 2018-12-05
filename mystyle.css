@@ -19,6 +19,16 @@ img.big_img {
 	height:420px;
 }
 
+img.big_img2 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+	width:730px;
+	height:486px;
+}
+
+
 img.xl_img {
 	margin-top: 5px;
 	margin-bottom: 5px;
