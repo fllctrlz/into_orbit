@@ -175,15 +175,10 @@
 		<br>
 
 		<p>
-			Our base robot is very robust and compact with a frame for strength. We also use four light sensors for maximum
-			flexibility,
-			with shielding from ambient light. The robot’s main drive wheels are medium in diameter and small in thickness to
-			allow
-			us to balance accuracy and speed together. The robot uses small wheels without rubber on them as sliders, to be
-			steering
-			neutral. Our modular design and attachment bay allows the robot driver to install and remove attachments quickly and
-			accurately,
-			while our brain’s positioning allows for easy swapping of batteries.
+			Our robot is very robust and compact with a frame for strength. We use four light sensors for maximum flexibility, 
+			with shielding from ambient light. Our robot has small wheels, which are steering neutral, and has narrow and hard wheels 
+			for more accuracy and both straight movements and turns. However, we sacrifice some speed due to our small diameter wheels 
+			which decrease the error associated with the drive motor rotation sensors.
 		</p>
 		<br>
 		<h2>Building Our Robot And Attachments</h2>
@@ -203,44 +198,29 @@
 		<br>
 		<h4>Finding the Optimal Set of Color Sensors for our Robot</h4>
 		<p>When first designing our robot we wanted to make sure that all the light/color sensors behaved similarly. Color
-			sensors
-			each return small differences in readings because of variations in manufacturing. For example, if you were to place
-			two
-			different color sensors on the same black line, each would return different values for light intensity. Sometimes
-			the
-			difference may be significant. To make sure that all our light sensors had about the same reading we completely
-			shielded
-			ten color sensors to eliminate the variable of ambient light and recorded the reading for each of the color sensors
-			on
-			black, white, and green. We then found the three color sensors which have the closest reading to each other and used
-			those
-			three color sensors on the robot.
+			sensors each return small differences in readings because of variations in manufacturing. For example, if you were to place
+			two different color sensors on the same black line, each would return different values for light intensity. Sometimes
+			the difference may be significant. To make sure that all our light sensors had about the same reading we completely
+			shielded ten color sensors to eliminate the variable of ambient light and recorded the reading for each of the color sensors
+			on black, white, and green. We then found the three color sensors which have the closest reading to each other and used
+			those three color sensors on the robot.
 		</p>
 		<br>
 		<h4>Making the Robot Drive Straight</h4>
 		<p>We have found that the green EV3 move blocks (Move Tank and Move Steering) are unreliable. Although they have a
-			built in
-			PID feature, they still do not move the robot in a straight line. To test this, we set a designated starting spot
-			for
-			the robot and then we ran it until it hit the wall on the other side of the table. We repeated this dozens of times
-			and
-			found that each time it would end up in a different spot on the other side of the table. Each time it would be up to
-			one
-			inch away from the previous run. Then, we made our own error-corrected move block (which you can read about in the
-			programming
-			section of this website). We conducted the same experiment using our block and found that there was much less error
-			and
-			the robot would consistently end up in the same position on the table.
+			built in PID feature, they still do not move the robot in a straight line. To test this, we set a designated starting spot
+			for the robot and then we ran it until it hit the wall on the other side of the table. We repeated this dozens of times
+			and	found that each time it would end up in a different spot on the other side of the table. Each time it would be up to
+			one	inch away from the previous run. Then, we made our own error-corrected move block (which you can read about in the
+			programming	section of this website). We conducted the same experiment using our block and found that there was much less error
+			and	the robot would consistently end up in the same position on the table.
 		</p>
 		<br>
 		<h4>Light Sensor Distance Experiment</h4>
 		<p>Our light sensors were dependent on the distance they were away from the mat. We found out that our light sensors
-			were
-			too low to the mat and were not picking up proper light readings. We used the EV3 experiment which can track the
-			different
-			movements on the motors and sensors. We tracked the readings to see if they would change properly from white to
-			black;
-			100 to 0. They did not reach those values so we realized it was too far from the mat.
+			were too low to the mat and were not picking up proper light readings. We used the EV3 experiment which can track the
+			different movements on the motors and sensors. We tracked the readings to see if they would change properly from white to
+			black; 100 to 0. They did not reach those values so we realized it was too far from the mat.
 		</p>
 		<br>
 		
@@ -256,77 +236,97 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="tick-border">Core Carts</td>
+					<td class="tick-border">Core Collection</td>
 					<td class="tick-border">
-						This attachment is a large frame with guide wheels to move along the west wall. It has a long horizontally-moving
-						arm that
-						uses string and a pulley system to move which connects to the gears on the robot when the frame is placed over
-						the
-						robot. As the robot moves along the west wall towards the Space Travel mission using its guide wheels, the arm
-						extends
-						eastward to trigger an elastic mechanism to collect all core samples. The arm then retracts. When the robot
-						reaches
-						the Space Travel mission, it uses a wedge to passively lift the end of the ramp resulting in the Vehicle Payload
-						rolling
-						down the ramp. While doing this, an arm on the end of the attachment pushes the Solar Panel Array away from our
-						competition
-						table. The robot then drives into the ramp releasing the other two payloads and allowing them to roll down the
-						ramp. The robot uses another arm to flatten the gate on the Crater Crossing mission model, preparing it for a later mission.
-						The robot then travels back to base.
-					</td>
+						This attachment completes the Core Samples extraction mission. It connects to the robot’s medium motor and when 
+						rotated, it slaps onto core samples mission model. The robot then continues to drive forward while the attachment 
+						slides along the top of the mission model and traps the core samples within the borders of the attachment.
 					<td width="44%" class="tick-border">
-						<img class="attachemnt_img" src="images/robot/attach1.jpg"></img>
 					</td>
 				</tr>
 				<tr>
-					<td class="tick-border">Escape Velocity</td>
+					<td class="tick-border">Tela-Velocity</td>
 					<td class="tick-border">
-						This attachment is a small frame that holds the robot with guide wheels to roll along the south wall. This
-						attachment also has two arms, one to trigger the Escape Velocity mission, and another to push the Observatory arm
-						to the orange. Another two motor powered arms trigger these arms. As the robot travels along the south wall, it
-						 Escape Velocity mission model and the motor-powered arm activates the
-						elastic-powered arm that is used to push the Observatory arm. As the robot continues moving, this arm pushes the
-						Observatory’s arm to the orange target area. The robot then moves back a set distance, and another motor-powered arm
-						releases another elastic-powered arm that completes the Escape Velocity mission. Then the robot travels along the south wall back to
-						base.</td>
+						This attachment completes the Escape Velocity and Telescope missions. The robot pushes the attachment against the 
+						wall using guide wheels that are attached to the frame. The robot stops abruptly causing the attachment to jerk forward,
+						dropping its heavy wheel on the launch pad on the Escape Velocity mission model then extends the arm using elastics. As 
+						the robot begins to drive forward, the arm pushes the pointer on the Telescope mission.</td>
 					<td width="44%" class="tick-border">
-						<img class="attachemnt_img" src="images/robot/attach2.jpg"></img>
 					</td>
 				</tr>
 				<tr>
-					<td class="tick-border">Tube Module</td>
+					<td class="tick-border">Water Core Sample</td>
 					<td class="tick-border">
-						This attachment is small with a guide wheel that is placed at the end of the attachment furthest from the robot.
-						The robot moves diagonally starting at the south wall and traveling towards the Habitation Hub mission model.
-						Once the sliding portion of the attachment reaches this mission model, angled beams on it act as a funnel and
-						force it to slide outwards. As the robot continues forward, the Tube Module is inserted into the west side of the
-						mission model. Once the Tube Module is inserted, the robot will travel back into base diagonally.
+				    This attachment drops the water core sample onto the food production mission model. The attachment is connected to the front large
+				    motor. After the robot completes the Food Production mission, the medium motor rotates, dropping the core sample onto the mission model. 
 					</td>
 					<td width="44%" class="tick-border">
-						<img class="attachemnt_img" src="images/robot/attach3.jpg"></img>
 					</td>
 				</tr>
 				<tr>
-					<td class="tick-border">3D Water Strength</td>
+					<td class="tick-border">Cone Module</td>
 					<td class="tick-border">
-						This attachment is medium in size and locks into place by being pushed on top of the robot. It connects to a
-						pneumatic attachment that is a leave behind attachment. It has two arms made from axles to hold the satellites on
-						the top of this attachment. It also has a funnel to adjust the robot’s position when completing the 3D Printer
-						mission and guide wheels on the pneumatic attachment to roll against the north wall. The robot first makes an arc
-						turn out of base to reach the 3D Printer mission model. The regolith is placed on an axle that triggers when it
-						hits the mission model. This also releases an agent craft that travels from east to west, completely past the
-						flattened gate of the Crater Crossing mission model. The robot then travels into the Strength Bar mission model,
-						which triggers the pneumatic powered arm to push the Strength Bar upwards and releasing the pneumatic attachment
-						from the robot. Then the robot backs away from the Strength Bar mission model and travels to the Food Production
-						mission model where the robot pushes the bar until the green side is showing, then a motor powered arm releases
-						the water Core Sample onto the Food production mission model. Finally, the robot completes an arc turn,
-						collecting the X satellite and pushing it to its target area, in-between the two lines near the northeast planet
-						area. The two satellites that are already on our robot will also be in their target area suspended in the air.
-					</td>
+						This attachment grabs the Cone Module. Using gear mechanisms, the arms on the attachment can rotate turning upwards. 
+						The robot drives towards the mission model, and once close enough, the motor rotates, grabbing the Cone Module, and delivers 
+						it back to base. 
 					<td width="44%" class="tick-border">
-						<img class="attachemnt_img" src="images/robot/attach4.jpg"></img>
 					</td>
 				</tr>
+				<tr>
+				    <td class="tick-border">Crater Crossing</td>
+					<td class="tick-border">
+						This attachment pushes down the gate on the Crater Crossing mission model. The attachment connects to the robot’s front large 
+						motor. The arm is extendable so that it can fit in base. The robot drives towards the mission model, and once there, the front 
+						large motor rotates, extending the arm far enough to slap down the gate. </td>
+					<td width="44%" class="tick-border">
+					</td>
+				</tr>
+				<tr>
+				    <td class="tick-border">3D Printer</td>
+					<td class="tick-border">
+						This attachment is connected to the front of the robot. It uses a passive attachment that drops a core sample inside the 3D 
+						Printing mission model causing the 3D brick to eject. The attachment is also a leave-behind. </td>
+					<td width="44%" class="tick-border">
+					</td>
+				</tr>
+				<tr>
+				    <td class="tick-border">Satellites</td>
+					<td class="tick-border">
+						This attachment is connected on top of the robot. Part of this attachment shoots our agent craft over the Crater Crossing mission 
+						model for 20 points. This attachment carries two satellites, and at the very end of our run, we drive the robot into the scoring 
+						zone with the satellites over it.  </td>
+					<td width="44%" class="tick-border">
+					</td>
+				</tr>
+                <tr>
+				    <td class="tick-border">Tube Hard</td>
+					<td class="tick-border">
+						This attachment is used to put Gerhard completely into the Habitation Hub's Airlock Chamber for maximum points. While Gerhard 
+						is getting put into the Habitation Hub's Airlock Chamber, the robot will drive forward and insert the Tube Module, and then drive 
+						back to base. </td>
+					<td width="44%" class="tick-border">
+					</td>
+				</tr>
+				<tr>
+				    <td class="tick-border">Solar Carts</td>
+					<td class="tick-border">
+						This attachment is connected to the back-medium motor. We have added a lock to connect the attachment to the robot incase the attachment 
+						comes off mid-way through the mission. There are guide wheels connected to the side frame of the attachment to drive along the west wall.
+						Once the robot reaches the Space Travel ramp, it continues to drive as a wedge lifts the lever on the mission model, letting the first 
+						payload roll down the ramp. Next, an arm on the attachment pushes the solar panel forward, as the robot continues driving. Once the robot 
+						reaches the mission model and cannot further drive, an arm with the other two payloads is then lowered, and the payloads get loaded onto the 
+						ramp. The payloads are loosely attached to the attachment, so when the robot then drives back to base the payloads are released and roll down 
+						the ramp.  </td>
+					<td width="44%" class="tick-border">
+					</td>
+				</tr>
+				<tr>
+				    <td class="tick-border">Sol-Arm</td>
+					<td class="tick-border">
+						This attachment pushes the other team’s solar panel forward. It is an arm that attaches to another attachment, and when the robot drives 
+						towards the panel, the arm pushes it forward.  </td>
+					<td width="44%" class="tick-border">
+					</td>
 			</tbody>
 		</table>
 
@@ -338,4 +338,5 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
+</html>
 </html>
