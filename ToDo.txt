@@ -1,1 +1,4 @@
-Photos(Team member photos, photos of experts, photos of project)
+attach pics
+building instructions video
+base robot pictures
+
